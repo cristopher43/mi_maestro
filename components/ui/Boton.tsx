@@ -1,0 +1,4 @@
+import { Pressable, Text, StyleSheet, type ViewStyle } from 'react-native';
+type Props={titulo:string; alTocar:()=>void; secundario?:boolean; estilo?:ViewStyle; desactivado?:boolean};
+export function Boton({titulo,alTocar,secundario,estilo,desactivado}:Props){return <Pressable accessibilityRole="button" disabled={desactivado} onPress={alTocar} style={[s.base,secundario?s.secundario:s.principal,desactivado&&s.deshabilitado,estilo]}><Text style={[s.texto,secundario&&s.textoSecundario]}>{titulo}</Text></Pressable>}
+const s=StyleSheet.create({base:{minHeight:60,borderRadius:16,paddingHorizontal:18,alignItems:'center',justifyContent:'center',borderWidth:1.5},principal:{backgroundColor:'#14754D',borderColor:'#14754D'},secundario:{backgroundColor:'#F2F8F4',borderColor:'#B8D6C2'},deshabilitado:{opacity:.5},texto:{fontSize:18,fontWeight:'800',color:'#fff',textAlign:'center'},textoSecundario:{color:'#146544'}});

@@ -1,0 +1,3 @@
+import { Tabs } from 'expo-router';
+import { Text } from 'react-native';
+export default function Pestanas(){return <Tabs screenOptions={{headerShown:false,tabBarActiveTintColor:'#14754D',tabBarInactiveTintColor:'#64756B',tabBarLabelStyle:{fontSize:13,fontWeight:'800'},tabBarStyle:{height:70,paddingTop:8,paddingBottom:8,backgroundColor:'#fff',borderTopColor:'#E2E9E4'}}}><Tabs.Screen name="index" options={{title:'Inicio',tabBarIcon:({color})=><Text style={{fontSize:22,color}}>⌂</Text>}}/><Tabs.Screen name="mis-trabajos" options={{title:'Mis trabajos',tabBarIcon:({color})=><Text style={{fontSize:22,color}}>▤</Text>}}/></Tabs>}

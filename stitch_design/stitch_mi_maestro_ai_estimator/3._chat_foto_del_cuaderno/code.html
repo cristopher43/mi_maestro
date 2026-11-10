@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#ffdad6", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "secondary-container": "#ffa454", "surface-container-high": "#dce9ff", "on-primary-fixed": "#002113", "secondary-fixed": "#ffdcc3", "error": "#ba1a1a", "tertiary-fixed-dim": "#b4c9dc", "on-primary": "#ffffff", "tertiary": "#4b5e6f", "surface-container-lowest": "#ffffff", "outline-variant": "#bec9c0", "on-primary-fixed-variant": "#005236", "primary-container": "#21845d", "primary-fixed-dim": "#7cd9ab", "secondary": "#904d00", "on-secondary-fixed": "#2f1500", "tertiary-fixed": "#d0e5f9", "on-secondary-fixed-variant": "#6e3900", "inverse-primary": "#7cd9ab", "on-error-container": "#93000a", "outline": "#6e7a72", "surface-tint": "#006c49", "on-error": "#ffffff", "tertiary-container": "#637788", "primary": "#006a47", "on-secondary-container": "#713b00", "on-secondary": "#ffffff", "surface-dim": "#cbdbf5", "inverse-on-surface": "#eaf1ff", "secondary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "on-primary-container": "#f6fff7", "on-tertiary-container": "#fdfcff", "on-surface": "#0b1c30", "inverse-surface": "#213145", "on-tertiary-fixed-variant": "#354959", "primary-fixed": "#98f5c6", "on-tertiary-fixed": "#081d2c", "surface-container-low": "#eff4ff", "on-surface-variant": "#3e4942", "surface-container-highest": "#d3e4fe", "surface-bright": "#f8f9ff", "on-background": "#0b1c30", "surface": "#f8f9ff", "background": "#f8f9ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-xl": "2rem", "gutter": "1rem", "space-lg": "1.5rem", "margin-tablet": "1.5rem", "margin": "1rem", "space-md": "1rem" }, fontFamily: { "headline-lg": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "numeric-quote": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"] }, fontSize: { "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.03em", fontWeight: "600" }], "numeric-quote": ["24px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["16px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "label-md": ["14px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }], "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><button aria-label="Volver atrás" class="flex items-center gap-1.5 h-11 min-h-[44px] px-space-sm -ml-2 rounded-lg text-primary hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span><span class="font-label-lg text-label-lg font-bold">Volver atrás</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate text-center flex-1">Asistente de presupuesto</h1><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Status Banner (Offline Reassurance) -->
+<aside aria-label="Estado de conexión" class="w-full bg-inverse-surface text-inverse-on-surface px-margin py-2.5 flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]" style="font-variation-settings: 'FILL' 1;">cloud_sync</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-normal">Guardado en tu teléfono activo</span>
+</div>
+<span class="bg-surface-variant/20 text-inverse-on-surface text-[11px] font-semibold px-2 py-0.5 rounded-full">Listo sin señal</span>
+</aside>
+<!-- Step Progress Header -->
+<section class="w-full px-margin pt-4 pb-2 bg-surface">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary font-bold tracking-tight">Paso 2 de 5: Foto del cuaderno</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">40% completado</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 40%;"></div>
+</div>
+</section>
+<!-- Chat History Stream -->
+<div class="flex flex-col px-margin py-4 space-y-4">
+<!-- Bubble 1: Assistant Prompt -->
+<div class="flex items-end gap-2.5 max-w-[90%] self-start">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="bg-surface-container-low text-on-surface p-3.5 rounded-2xl rounded-bl-sm shadow-sm">
+<p class="font-body-md text-body-md leading-relaxed text-on-surface">¿Tienes las medidas anotadas en tu cuaderno?</p>
+<span class="block mt-1 font-label-sm text-label-sm text-on-surface-variant opacity-80 text-right">09:41</span>
+</div>
+</div>
+<!-- Bubble 2: User Answer -->
+<div class="flex flex-col gap-2 max-w-[90%] self-end items-end w-full"><span class="text-[11px] font-label-sm text-on-surface-variant font-medium px-1">Respuestas rápidas</span><div class="flex flex-wrap gap-2 justify-end w-full"><button type="button" class="bg-primary text-on-primary font-label-md text-label-md px-3.5 py-2.5 rounded-xl shadow-sm hover:opacity-95 active:scale-95 transition-all text-left flex items-center gap-1.5 cursor-pointer"><span class="material-symbols-outlined text-[18px]">photo_camera</span><span class="">Sí, sacaré una foto</span></button><button type="button" class="bg-surface-container text-on-surface font-label-md text-label-md px-3.5 py-2.5 rounded-xl shadow-sm hover:bg-surface-container-high active:scale-95 transition-all text-left flex items-center gap-1.5 cursor-pointer"><span class="material-symbols-outlined text-[18px] text-primary">photo_library</span><span class="">Elegir una foto</span></button><button type="button" class="bg-surface-container-low text-on-surface-variant font-label-md text-label-md px-3.5 py-2.5 rounded-xl border border-outline-variant hover:bg-surface-container active:scale-95 transition-all text-left flex items-center gap-1.5 cursor-pointer"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="">No, las escribiré</span></button></div></div>
+<!-- Bubble 3: Assistant Guided Decision Card -->
+<div class="flex items-start gap-2.5 w-full self-start">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm mt-1">
+<span class="material-symbols-outlined text-[20px]">smart_toy</span>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-2xl p-4 shadow-md space-y-4"><div class="flex items-center gap-2"><span class="px-2.5 py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">document_scanner</span> Leer los números de la foto</span></div><p class="font-headline-sm text-headline-sm text-on-surface leading-snug">Sácale una foto a tu libreta y revisaremos las medidas juntos.</p><div class="bg-surface-container-low rounded-xl p-3.5 space-y-2 border border-outline-variant/50"><p class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5"><span class="material-symbols-outlined text-primary text-[20px]">tips_and_updates</span> Consejos antes de tomar la foto:</p><ul class="font-body-sm text-body-sm text-on-surface-variant space-y-1.5 pl-1"><li class="">1. Pon el cuaderno sobre una superficie plana</li><li class="">2. Busca buena luz</li><li class="">3. Asegúrate de que se vean todos los números</li></ul></div><div class="flex flex-col gap-2.5 pt-1"><button class="w-full min-h-[64px] h-[64px] bg-primary text-on-primary rounded-xl px-4 flex items-center justify-center gap-3 shadow-md hover:opacity-95 active:scale-[0.98] transition-transform cursor-pointer" id="btn-camera" type="button"><span class="material-symbols-outlined text-[32px] text-on-primary">photo_camera</span><span class="font-headline-sm text-headline-sm text-on-primary font-bold tracking-tight">Abrir cámara</span></button><button class="w-full min-h-[56px] h-[56px] bg-surface-container text-on-surface rounded-xl px-4 flex items-center justify-center gap-2.5 shadow-sm hover:bg-surface-container-high active:scale-[0.98] transition-all cursor-pointer" id="btn-gallery" type="button"><span class="material-symbols-outlined text-[24px] text-primary">photo_library</span><span class="font-label-lg text-label-lg text-on-surface font-bold">Elegir foto</span></button></div><div class="bg-surface-container-high/60 rounded-xl p-3 flex items-center justify-between gap-3"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary text-[20px]">keyboard</span><span class="font-body-sm text-body-sm text-on-surface">¿Prefieres teclear?</span></div><button class="px-3.5 py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md font-bold shadow-sm active:scale-95 transition-transform shrink-0 flex items-center gap-1.5 cursor-pointer" id="btn-manual" type="button"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="">Escribir medidas</span></button></div><div class="flex items-start gap-2 pt-1 text-on-surface-variant"><span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">info</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">La foto quedó guardada en este teléfono. La leeremos cuando vuelva internet.</p></div></div>
+</div>
+</div>
+<!-- Bottom Persistent Quick-Capture Dock -->
+<div class="sticky bottom-0 w-full bg-surface-container-lowest p-3 shadow-[0_-4px_20px_rgba(11,28,48,0.08)]">
+<div class="flex items-center gap-2 max-w-full">
+<!-- Instant Big Camera Button (Gloves/Quick Jobsite Access) -->
+<button aria-label="Abrir cámara rápidamente" class="w-14 h-14 min-w-[56px] rounded-xl bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-95 transition-transform shrink-0 cursor-pointer">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">camera_alt</span>
+</button>
+<!-- Chat Input Field Wrapper -->
+<div class="flex-1 min-h-[56px] bg-surface-container-low rounded-xl px-3 flex items-center gap-2">
+<input class="w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant focus:outline-none" id="chat-input" placeholder="Escribe o pregunta algo..." type="text">
+<!-- Jobsite Voice Dictation Tool -->
+<button aria-label="Dictar notas por voz" class="w-10 h-10 rounded-lg text-primary flex items-center justify-center hover:bg-surface-container-high transition-colors shrink-0" id="btn-mic" type="button">
+<span class="material-symbols-outlined text-[24px]">mic</span>
+</button>
+</div>
+<!-- Send Trigger -->
+<button aria-label="Enviar mensaje" class="w-12 h-14 rounded-xl bg-surface-container text-primary flex items-center justify-center hover:bg-primary hover:text-on-primary active:scale-95 transition-all shrink-0 cursor-pointer" id="btn-send">
+<span class="material-symbols-outlined text-[24px]">send</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  (function () {
+    const cameraBtn = document.getElementById('btn-camera');
+    const galleryBtn = document.getElementById('btn-gallery');
+    const manualBtn = document.getElementById('btn-manual');
+    const micBtn = document.getElementById('btn-mic');
+    const sendBtn = document.getElementById('btn-send');
+    const chatInput = document.getElementById('chat-input');
+
+    if (cameraBtn) {
+      cameraBtn.addEventListener('click', () => {
+        cameraBtn.classList.add('scale-95');
+        setTimeout(() => cameraBtn.classList.remove('scale-95'), 150);
+      });
+    }
+
+    if (galleryBtn) {
+      galleryBtn.addEventListener('click', () => {
+        galleryBtn.classList.add('scale-95');
+        setTimeout(() => galleryBtn.classList.remove('scale-95'), 150);
+      });
+    }
+
+    if (manualBtn && chatInput) {
+      manualBtn.addEventListener('click', () => {
+        chatInput.focus();
+        chatInput.placeholder = "Escribe tus medidas (ej. 3.20m x 2.40m)...";
+      });
+    }
+
+    if (micBtn) {
+      let isRecording = false;
+      micBtn.addEventListener('click', () => {
+        isRecording = !isRecording;
+        if (isRecording) {
+          micBtn.classList.add('text-error', 'animate-pulse');
+        } else {
+          micBtn.classList.remove('text-error', 'animate-pulse');
+        }
+      });
+    }
+
+    if (sendBtn && chatInput) {
+      sendBtn.addEventListener('click', () => {
+        if (chatInput.value.trim() !== "") {
+          chatInput.value = "";
+        }
+      });
+    }
+  })();
+</script></main>
+
+</body></html>

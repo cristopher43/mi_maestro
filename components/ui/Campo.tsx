@@ -1,0 +1,4 @@
+import { Text, TextInput, View, StyleSheet, type KeyboardTypeOptions } from 'react-native';
+type Props={etiqueta:string;valor:string;alCambiar:(v:string)=>void;ejemplo?:string;teclado?:KeyboardTypeOptions;multilinea?:boolean};
+export function Campo({etiqueta,valor,alCambiar,ejemplo,teclado,multilinea}:Props){return <View style={s.contenedor}><Text style={s.etiqueta}>{etiqueta}</Text><TextInput accessibilityLabel={etiqueta} value={valor} onChangeText={alCambiar} placeholder={ejemplo} keyboardType={teclado} multiline={multilinea} style={[s.campo,multilinea&&s.multilinea]}/></View>}
+const s=StyleSheet.create({contenedor:{gap:8},etiqueta:{fontSize:16,fontWeight:'800',color:'#19392E'},campo:{minHeight:58,borderRadius:15,borderWidth:1.5,borderColor:'#D5E0D8',backgroundColor:'#fff',paddingHorizontal:15,fontSize:18,color:'#19392E'},multilinea:{minHeight:100,textAlignVertical:'top',paddingTop:12}});

@@ -1,0 +1,178 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,600,0,0" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#ffdad6", "surface-variant": "#d3e4fe", "surface-container": "#e5eeff", "secondary-container": "#ffa454", "surface-container-high": "#dce9ff", "on-primary-fixed": "#002113", "secondary-fixed": "#ffdcc3", "error": "#ba1a1a", "tertiary-fixed-dim": "#b4c9dc", "on-primary": "#ffffff", "tertiary": "#4b5e6f", "surface-container-lowest": "#ffffff", "outline-variant": "#bec9c0", "on-primary-fixed-variant": "#005236", "primary-container": "#21845d", "primary-fixed-dim": "#7cd9ab", "secondary": "#904d00", "on-secondary-fixed": "#2f1500", "tertiary-fixed": "#d0e5f9", "on-secondary-fixed-variant": "#6e3900", "inverse-primary": "#7cd9ab", "on-error-container": "#93000a", "outline": "#6e7a72", "surface-tint": "#006c49", "on-error": "#ffffff", "tertiary-container": "#637788", "primary": "#006a47", "on-secondary-container": "#713b00", "on-secondary": "#ffffff", "surface-dim": "#cbdbf5", "inverse-on-surface": "#eaf1ff", "secondary-fixed-dim": "#ffb77d", "on-tertiary": "#ffffff", "on-primary-container": "#f6fff7", "on-tertiary-container": "#fdfcff", "on-surface": "#0b1c30", "inverse-surface": "#213145", "on-tertiary-fixed-variant": "#354959", "primary-fixed": "#98f5c6", "on-tertiary-fixed": "#081d2c", "surface-container-low": "#eff4ff", "on-surface-variant": "#3e4942", "surface-container-highest": "#d3e4fe", "surface-bright": "#f8f9ff", "on-background": "#0b1c30", "surface": "#f8f9ff", "background": "#f8f9ff" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-sm": "0.5rem", "gutter-mobile": "0.75rem", "space-xs": "0.25rem", "space-xl": "2rem", "gutter": "1rem", "space-lg": "1.5rem", "margin-tablet": "1.5rem", "margin": "1rem", "space-md": "1rem" }, fontFamily: { "headline-lg": ["Inter"], "headline-sm": ["Inter"], "headline-md": ["Inter"], "label-sm": ["Inter"], "numeric-quote": ["Inter"], "body-lg": ["Inter"], "headline-lg-mobile": ["Inter"], "label-lg": ["Inter"], "label-md": ["Inter"], "body-md": ["Inter"], "body-sm": ["Inter"] }, fontSize: { "headline-lg": ["28px", { lineHeight: "36px", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "600" }], "headline-md": ["22px", { lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "600" }], "label-sm": ["12px", { lineHeight: "16px", letterSpacing: "0.03em", fontWeight: "600" }], "numeric-quote": ["24px", { lineHeight: "28px", letterSpacing: "0em", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "500" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", letterSpacing: "-0.02em", fontWeight: "700" }], "label-lg": ["16px", { lineHeight: "20px", letterSpacing: "0.01em", fontWeight: "600" }], "label-md": ["14px", { lineHeight: "18px", letterSpacing: "0.02em", fontWeight: "600" }], "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }], "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md antialiased flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><button aria-label="Volver atrás" class="flex items-center gap-1.5 h-11 min-h-[44px] px-space-sm -ml-2 rounded-lg text-primary hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span><span class="font-label-lg text-label-lg font-bold">Volver atrás</span></button><h1 class="font-headline-sm text-headline-sm text-on-surface truncate text-center flex-1">Asistente De Presupuesto</h1><div class="flex items-center gap-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<!-- Persistent Sync & Step Sub-bar -->
+<div class="px-margin pt-space-sm pb-space-xs flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">cloud_done</span>
+<span class="font-label-sm text-label-sm font-semibold">Guardado en tu teléfono</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">Paso 3 de 5: Revisión de medidas</span>
+</div>
+<!-- Screen Progress Indicator -->
+<div class="px-margin mb-space-sm">
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full transition-all duration-300" style="width: 60%;"></div>
+</div>
+</div>
+<!-- Main Content Stack -->
+<div class="px-margin space-y-space-md pb-space-xl">
+<!-- Conversational Assistant Bubble -->
+<div class="bg-surface-container-low rounded-2xl rounded-bl-sm p-space-md shadow-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="space-y-0.5"><h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Revisa las medidas que leí de tu foto</h2><p class="font-body-md text-body-md text-on-surface-variant leading-snug mt-1">Puedes tocar <strong>Corregir</strong> junto a cualquier medida si necesitas ajustarla.</p></div>
+</div>
+</div>
+<!-- Notebook Capture Thumbnail Preview Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm flex items-center gap-space-md">
+<div class="relative w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of a rugged construction contractor's lined notebook with handwritten pencil measurements for roof dimensions, resting on a wooden carpentry table under natural direct sunlight with dust particles and measuring tape nearby, warm authentic tradesperson atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-LNHGO1vzTtkqj55crrQedO_F8FVdtX7NkfMmHCS7dbpv78r1T0L8tVqLKJCoj3I4PBt9WSyXouT4cm2-mgB7GqG3PODMTQ4SkrrgB5Yw659qTAwD5E43MVPkc7bY5KBIN4wnEDRl0hrZnuxEuuTzLXGEv1-NAhVJeaHtl-dr3Llawcw_s2AxGnDrGKdrvNdHfxdCaadWXUa-B4uTvRUi-D-vQhxsZSebrxJV80VZ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+<div class="absolute bottom-1 right-1 bg-surface/90 text-on-surface p-0.5 rounded">
+<span class="material-symbols-outlined text-[14px] block">zoom_in</span>
+</div>
+</div>
+<div class="flex-1 min-w-0 pr-space-xs"><div class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed mb-1"><span class="material-symbols-outlined text-[14px] font-bold">check_circle</span><span class="font-label-sm text-label-sm font-bold">Foto analizada</span></div><p class="font-label-md text-label-md font-bold text-on-surface truncate">Cuaderno_Alero_Norte.jpg</p><div class="mt-2 flex items-center gap-3"><button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold active:opacity-75" type="button"><span class="material-symbols-outlined text-[16px]">visibility</span><span class="">Ver foto</span></button><span class="text-tertiary text-[12px]">•</span><button class="inline-flex items-center gap-1 text-primary hover:text-primary-container font-label-sm text-label-sm font-semibold active:opacity-75" type="button"><span class="material-symbols-outlined text-[16px]">photo_camera</span><span class="">Tomar otra foto</span></button></div></div>
+</div>
+<!-- Detected Measurements List -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Medidas detectadas (3)</h2>
+<span class="font-label-sm text-label-sm text-tertiary">Superficie útil</span>
+</div>
+<!-- Item 1: Tramo Principal -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all active:scale-[0.99]" id="card-item-1"><div class="flex items-start justify-between gap-space-sm"><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span><span class="font-label-md text-label-md font-bold text-on-surface truncate">Tramo principal</span></div><div class="mt-2 text-on-surface flex flex-wrap items-baseline gap-x-2 gap-y-1"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">7 m × 8,5 m</span><span class="font-label-md text-label-md text-tertiary">=</span><span class="font-headline-sm text-headline-sm font-bold text-primary">59,5 m²</span></div></div><button aria-label="Corregir Tramo principal" class="h-11 min-h-[44px] px-4 rounded-xl bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md font-bold flex items-center gap-1 shrink-0 active:scale-95 transition-transform" onclick="toggleEditModal('Tramo principal', '7.0', '8.5')" type="button"><span class="material-symbols-outlined text-[18px]">edit</span><span class="">Corregir</span></button></div></div>
+<!-- Item 2: Aleros Frontales -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all active:scale-[0.99]" id="card-item-2"><div class="flex items-start justify-between gap-space-sm"><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span><span class="font-label-md text-label-md font-bold text-on-surface truncate">Aleros frontales</span></div><div class="mt-2 text-on-surface flex flex-wrap items-baseline gap-x-2 gap-y-1"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">3,6 m × 5,9 m</span><span class="font-label-md text-label-md text-tertiary">=</span><span class="font-headline-sm text-headline-sm font-bold text-primary">21,24 m²</span></div></div><button aria-label="Corregir Aleros frontales" class="h-11 min-h-[44px] px-4 rounded-xl bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md font-bold flex items-center gap-1 shrink-0 active:scale-95 transition-transform" onclick="toggleEditModal('Aleros frontales', '3.6', '5.9')" type="button"><span class="material-symbols-outlined text-[18px]">edit</span><span class="">Corregir</span></button></div></div>
+<!-- Item 3: Aleros Laterales -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm transition-all active:scale-[0.99]" id="card-item-3"><div class="flex items-start justify-between gap-space-sm"><div class="flex-1 min-w-0"><div class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-primary shrink-0"></span><span class="font-label-md text-label-md font-bold text-on-surface truncate">Aleros laterales</span></div><div class="mt-2 text-on-surface flex flex-wrap items-baseline gap-x-2 gap-y-1"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">9 m × 3,9 m</span><span class="font-label-md text-label-md text-tertiary">=</span><span class="font-headline-sm text-headline-sm font-bold text-primary">35,1 m²</span></div></div><button aria-label="Corregir Aleros laterales" class="h-11 min-h-[44px] px-4 rounded-xl bg-surface-container-high hover:bg-surface-variant text-primary font-label-md text-label-md font-bold flex items-center gap-1 shrink-0 active:scale-95 transition-transform" onclick="toggleEditModal('Aleros laterales', '9.0', '3.9')" type="button"><span class="material-symbols-outlined text-[18px]">edit</span><span class="">Corregir</span></button></div></div><div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm border border-secondary-container/30"><div class="flex items-start justify-between gap-space-sm"><div class="flex-1 min-w-0"><div class="flex items-center gap-1.5 text-secondary font-bold font-label-md text-label-md"><span class="material-symbols-outlined text-[20px]">warning</span><span class="">⚠️ No se alcanza a leer (requiere confirmación)</span></div><p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">Alero posterior: trazo difuso en la foto tomada.</p></div><button aria-label="Ingresar a mano" class="h-11 min-h-[44px] px-3 rounded-xl bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md font-bold flex items-center gap-1 shrink-0 active:scale-95 transition-transform" onclick="toggleEditModal('Alero posterior', '', '')" type="button"><span class="material-symbols-outlined text-[18px]">edit_note</span><span class="">Ingresar a mano</span></button></div></div>
+</div>
+<!-- Deterministic Calculation Breakdown Box -->
+<div class="bg-surface-container rounded-2xl p-space-md space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">calculate</span>
+<h3 class="font-label-lg text-label-lg font-bold text-on-surface">Explicación del cálculo</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">Sumamos: <span class="font-semibold text-on-surface">59,5</span> + <span class="font-semibold text-on-surface">21,24</span> + <span class="font-semibold text-on-surface">35,1</span> = <strong class="font-bold text-primary">115,84 m²</strong> de superficie total.</p>
+<div class="pt-2 flex items-center justify-between border-t-0 bg-surface-container-lowest/80 p-3 rounded-xl">
+<span class="font-label-md text-label-md font-bold text-tertiary">Total verificado</span>
+<div class="flex items-baseline gap-1">
+<span class="font-numeric-quote text-numeric-quote text-primary font-bold">115,84</span>
+<span class="font-label-md text-label-md font-bold text-primary">m²</span>
+</div>
+</div>
+</div>
+<!-- Decision Prompt Block -->
+<div class="pt-space-xs text-center space-y-1">
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">
+        ¿Estas medidas están correctas?
+      </p>
+<p class="font-label-sm text-label-sm text-tertiary">
+        Podrás ajustar precios y mano de obra en el siguiente paso.
+      </p>
+</div>
+<!-- Action Buttons -->
+<div class="space-y-space-sm pt-space-xs">
+<!-- Primary Big Action (60px tactile) -->
+<button class="w-full h-[60px] min-h-[56px] bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-md active:scale-[0.98] transition-all" id="btn-confirm" onclick="confirmAndProceed()" type="button">
+<span class="material-symbols-outlined text-[24px]">check_circle</span>
+<span class="">Sí, continuar</span>
+</button>
+<!-- Secondary Soft Action (54px tactile) -->
+<button class="w-full h-[54px] min-h-[50px] bg-surface-container-high text-on-surface rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 active:bg-surface-variant transition-colors" onclick="openBulkCorrection()" type="button">
+<span class="material-symbols-outlined text-[22px] text-tertiary">edit_note</span>
+<span class="">Corregir medidas</span>
+</button>
+</div>
+<!-- Clarification Note -->
+<div class="flex items-start gap-2 px-1 pt-1 pb-2 text-tertiary">
+<span class="material-symbols-outlined text-[18px] text-primary shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<p class="font-label-sm text-label-sm leading-tight text-on-surface-variant">
+        La IA propone estos valores pero tú siempre tienes la última palabra.
+      </p>
+</div>
+</div>
+<!-- Interactive Quick Edit Bottom Sheet (Modal state) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/50 backdrop-blur-sm hidden flex-col justify-end p-margin transition-opacity" id="edit-modal">
+<div class="bg-surface-container-lowest rounded-3xl p-space-lg w-full max-w-lg mx-auto shadow-2xl space-y-space-md animate-in fade-in duration-200">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">Modificar Sección</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface" id="modal-title">Tramo principal</h3>
+</div>
+<button class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface" onclick="closeEditModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<div>
+<label class="block font-label-md text-label-md font-bold text-on-surface mb-1">Ancho (metros)</label>
+<div class="relative flex items-center">
+<input class="w-full h-14 bg-surface-container-low text-on-surface px-4 rounded-xl font-headline-sm text-headline-sm focus:outline-none focus:ring-0" id="modal-width" step="0.1" type="number">
+<span class="absolute right-4 font-label-md text-label-md text-tertiary font-bold">m</span>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md font-bold text-on-surface mb-1">Largo (metros)</label>
+<div class="relative flex items-center">
+<input class="w-full h-14 bg-surface-container-low text-on-surface px-4 rounded-xl font-headline-sm text-headline-sm focus:outline-none focus:ring-0" id="modal-length" step="0.1" type="number">
+<span class="absolute right-4 font-label-md text-label-md text-tertiary font-bold">m</span>
+</div>
+</div>
+</div>
+<div class="pt-2">
+<button class="w-full h-14 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 active:scale-98 transition-transform" onclick="saveQuickEdit()" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span class="">Guardar corrección</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  function toggleEditModal(title, width, length) {
+    const modal = document.getElementById('edit-modal');
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-width').value = width;
+    document.getElementById('modal-length').value = length;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+  }
+
+  function closeEditModal() {
+    const modal = document.getElementById('edit-modal');
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+  }
+
+  function saveQuickEdit() {
+    // Feedback micro-interaction
+    const btn = event.currentTarget;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">check</span> Actualizado';
+    setTimeout(() => {
+      closeEditModal();
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">save</span> Guardar corrección';
+    }, 400);
+  }
+
+  function openBulkCorrection() {
+    toggleEditModal('Revisión General', '7.0', '8.5');
+  }
+
+  function confirmAndProceed() {
+    const btn = document.getElementById('btn-confirm');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[24px] animate-spin">refresh</span> Guardando...';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[24px]">check</span> ¡Listo!';
+    }, 700);
+  }
+</script></main>
+
+</body></html>

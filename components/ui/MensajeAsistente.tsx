@@ -1,0 +1,3 @@
+import { Text, View, StyleSheet } from 'react-native';
+export function MensajeAsistente({titulo,ayuda}:{titulo:string;ayuda:string}){return <View accessibilityRole="summary" style={s.burbuja}><Text style={s.remitente}>◉  Mi Maestro</Text><Text style={s.titulo}>{titulo}</Text><Text style={s.ayuda}>{ayuda}</Text></View>}
+const s=StyleSheet.create({burbuja:{backgroundColor:'#fff',padding:19,borderRadius:21,borderBottomLeftRadius:7,gap:9,borderWidth:1,borderColor:'#E2E9E4',shadowColor:'#16372C',shadowOpacity:.04,shadowRadius:8,elevation:1},remitente:{fontSize:14,fontWeight:'900',color:'#14754D'},titulo:{fontSize:24,lineHeight:32,fontWeight:'900',color:'#19392E'},ayuda:{fontSize:17,lineHeight:25,color:'#52665B'}});

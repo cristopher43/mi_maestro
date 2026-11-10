@@ -1,0 +1,21 @@
+{
+  "expo": {
+    "name": "Mi Maestro",
+    "slug": "mi-maestro",
+    "version": "0.2.0",
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "name": "Mi Maestro",
+      "shortName": "Mi Maestro",
+      "themeColor": "#006a47",
+      "backgroundColor": "#f8f9ff"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
